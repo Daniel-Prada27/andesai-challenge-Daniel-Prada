@@ -18,15 +18,3 @@ def load_orders():
 
 def save_orders(df):
     df.to_csv(ORDERS_PATH, index=False)
-
-
-df = load_items()
-
-print(df.head())
-
-df.loc[df['name'] == 'Pollo', 'stock'] = 80
-
-save_items(df)
-
-df = load_items()
-print(df.head())
