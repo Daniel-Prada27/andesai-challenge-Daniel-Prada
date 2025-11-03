@@ -49,3 +49,11 @@ def create_order(order):
     save_orders(df_orders)
 
     return {"order_id": order.order_id, "status": "success", "total_cost": float(total_cost)}
+
+def get_items():
+    df = load_items()
+    return df.to_dict(orient='records')
+
+def get_orders():
+    df = load_orders()
+    return df.to_dict(orient='records')
