@@ -97,3 +97,15 @@ def get_stock_coverage(days: int = 7):
     kpi_df = kpi_df[['sku', 'name', 'stock', 'avg_daily_sales', 'stock_coverage_in_days']].to_dict(orient='records')
 
     return kpi_df
+
+def update_item(sku, item):
+    df = load_items()
+
+    if (sku not in df['sku'].values):
+        raise ValueError(f"Product sku={sku} not found")
+
+    df.loc[df['sku'] == sku, ['name', 'stock', 'unit_cost']] = [item.name, item.stock, item.unit_cost]
+
+    save_items(df)
+
+    return sku
