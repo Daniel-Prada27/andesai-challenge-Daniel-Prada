@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from services import get_orders, create_order
+from services.orders import get_orders, create_order
 from models import Order
 
 router = APIRouter()

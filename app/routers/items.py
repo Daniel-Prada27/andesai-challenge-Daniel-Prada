@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from services import get_items, create_item, update_item, delete_item
+from services.items import get_items, create_item, update_item, delete_item
 from models import Item
 
 router = APIRouter()
