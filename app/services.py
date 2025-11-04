@@ -109,3 +109,15 @@ def update_item(sku, item):
     save_items(df)
 
     return sku
+
+def delete_item(sku):
+    df = load_items()
+
+    if (sku not in df['sku'].values):
+        raise ValueError(f"Product sku={sku} not found")
+    
+    df = df[df['sku'] != sku]
+
+    save_items(df)
+
+    return sku

@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from typing import Union
 from models import Item, Order
-from services import create_item, create_order, get_items, get_orders, get_stock_coverage, update_item
+from services import create_item, create_order, get_items, get_orders, get_stock_coverage, update_item, delete_item
 
 app = FastAPI()
 
@@ -44,5 +44,13 @@ def updt_item(sku: str, item: Item):
     try:
         sku = update_item(sku, item)
         return {"message": f"Item {sku} updated successfully"}
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+@app.delete('/items/{sku}')
+def remove_item(sku: str):
+    try:
+        sku = delete_item(sku)
+        return {"message": f"Item {sku} deleted successfully"}
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
