@@ -1,6 +1,6 @@
 import pandas as pd
 from datetime import datetime, timedelta
-from app.database import load_items, load_orders
+from database import load_items, load_orders
 
 def get_stock_coverage(days: int = 7):
 

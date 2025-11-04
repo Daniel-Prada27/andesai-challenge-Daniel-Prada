@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from typing import Union
-from app.services.kpi import get_stock_coverage
+from services.kpi import get_stock_coverage
 
 router = APIRouter()
 

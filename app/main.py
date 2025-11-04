@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routers import items, orders, kpi
+from routers import items, orders, kpi
 
 app = FastAPI()
 
