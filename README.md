@@ -31,7 +31,7 @@ La información se persiste en archivos `.csv`, lo que facilita su visualizació
 ### 1. Clonar el repositorio
 ```bash
 git clone https://github.com/Daniel-Prada27/andesai-challenge-Daniel-Prada.git
-cd mini-api-restaurante
+cd andesai-challenge-Daniel-Prada 
 ```
 
 ### 2️. Crear la imagen Docker
