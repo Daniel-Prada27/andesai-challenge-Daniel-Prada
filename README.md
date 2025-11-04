@@ -34,12 +34,12 @@ git clone https://github.com/Daniel-Prada27/andesai-challenge-Daniel-Prada.git
 cd andesai-challenge-Daniel-Prada 
 ```
 
-### 2️. Crear la imagen Docker
+### 2. Crear la imagen Docker
 ```bash
 docker build -t mini-api-restaurante .
 ```
 
-### 3️. Ejecutar el contenedor
+### 3. Ejecutar el contenedor
 ```bash
 docker run -p 8000:8000 mini-api-restaurante
 ```
